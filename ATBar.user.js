@@ -67,6 +67,10 @@ function __start(){
 				
 				if(typeof localStorage != null) localStorage.removeItem("ATBarAutoLoad");
 			});	
+			
+			AtKit.addCloseFn('close-saved', function(){
+				if(typeof localStorage != null) localStorage.removeItem("ATBarAutoLoad");
+			});	
 		
 			// Run
 			AtKit.render();
